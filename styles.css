@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #game-container {
+    text-align: center;
+  }
+  
+  #instruction {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .blink {
+    animation: blink 1s infinite alternate;
+  }
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  #user-input {
+    font-size: 18px;
+    margin-bottom: 20px;
+   }
+  
+  
+  
+  
+  button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
