@@ -6,14 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const startButton = document.getElementById("start-button");
 
+  /* 다크모드 */
+  const darkModeToggle = document.getElementById("dark-mode-checkbox");
+
+  darkModeToggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+  });
+
+  /* ******** */
+
   let answer = [];
   let userInput = [];
   let level = 1;
   let gameRunning = false;
-  
+
   // 단계 설정
   const controlNumber = 10;
-  
+
   // 방향
   const directions = ["←", "→", "↑", "↓"];
 

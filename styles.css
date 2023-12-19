@@ -1,81 +1,112 @@
+/* 기본 스타일 */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  #game-container {
-    text-align: center;
-  }
-  
-  #instruction {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  .blink {
-    animation: blink 1s infinite alternate;
-  }
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-  
-  #user-input {
-    font-size: 18px;
-    margin-bottom: 20px;
-   }
-  
-  
-  
-  
-  button {
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  /* 최종 축하메세지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  margin: 0;
+}
 
-  #congratulation-message{
-    font-size: 24px;
-    color : green;
-    margin-bottom: 20px;
-  }
+#game-container {
+  text-align: center;
+}
 
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    width: 60%
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-  }
+#instruction {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-  #modal-message {
-    white-space: pre-line;
+.blink {
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0;
+  }
+}
+
+#user-input {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 13px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#congratulation-message {
+  font-size: 24px;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  width: 60%;
+  color: #000; /* 모달 내 글자 색상 (검정색) */
+}
+
+#modal-message {
+  white-space: pre-line;
+}
+
+/* 다크 모드 스타일 */
+body.dark-mode {
+  color: #fff; /* 글자 색상 (흰색) */
+  background-color: #333; /* 배경 색상 (어두운 회색) */
+}
+
+#instruction.dark-mode {
+  color: #fff; /* 텍스트 색상 (흰색) */
+}
+
+#user-input.dark-mode {
+  color: #fff; /* 텍스트 색상 (흰색) */
+}
+
+button.dark-mode {
+  color: #fff; /* 버튼 텍스트 색상 (흰색) */
+}
+
+#congratulation-message.dark-mode {
+  color: green; /* 축하 메시지 색상 (녹색) */
+}
+
+.modal-content.dark-mode {
+  color: #000; /* 모달 내 글자 색상 (검정색) */
+  background-color: #fff; /* 모달 배경 색상 (흰색) */
+}
+.dark-mode-switch .dark-mode-slider {
+  background-color: #fff;
+}
+
+.dark-mode-switch input:checked + .dark-mode-slider {
+  background-color: #333;
+}
+
+.dark-mode-switch input:checked + .dark-mode-slider:before {
+  background-color: #fff;
+}
